@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/background"
+    tools:context=".DashboardFragment">
+
+    <!-- ImageButton for Search -->
+    <!-- Notification icon -->
+
+    <!-- SearchView -->
+
+    <ImageView
+        android:id="@+id/searchButton"
+        android:layout_width="51dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="64dp"
+        android:contentDescription="Search"
+        android:elevation="2dp"
+        android:onClick="onSearchClick"
+        android:padding="8dp"
+        android:src="@drawable/baseline_search_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/notificationIcon"
+        android:layout_width="38dp"
+        android:layout_height="54dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:contentDescription="Notification"
+
+        android:src="@drawable/baseline_notifications_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/searchButton" />
+
+    <!-- RecyclerView for displaying cryptocurrency items -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/action_search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/light_white"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchButton" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cryptoRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/action_search"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
