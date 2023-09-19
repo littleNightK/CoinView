@@ -27,18 +27,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- RecyclerView for displaying cryptocurrency items -->
     <ImageView
         android:id="@+id/notificationIcon"
         android:layout_width="38dp"
         android:layout_height="54dp"
+        android:layout_marginEnd="16dp"
         android:background="?android:attr/selectableItemBackground"
-        android:contentDescription="Notification"
 
+        android:contentDescription="Notification"
         android:src="@drawable/baseline_notifications_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/searchButton" />
 
-    <!-- RecyclerView for displaying cryptocurrency items -->
     <androidx.appcompat.widget.SearchView
         android:id="@+id/action_search"
         android:layout_width="0dp"
