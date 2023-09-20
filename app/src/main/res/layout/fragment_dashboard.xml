@@ -27,7 +27,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- RecyclerView for displaying cryptocurrency items -->
     <ImageView
         android:id="@+id/notificationIcon"
         android:layout_width="38dp"
@@ -49,6 +48,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchButton" />
 
+    <!-- RecyclerView for displaying cryptocurrency items -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/cryptoRecyclerView"
         android:layout_width="match_parent"
