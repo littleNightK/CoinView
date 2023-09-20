@@ -1,11 +1,13 @@
 package com.example.mycrypto;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import androidx.fragment.app.Fragment;
@@ -49,6 +51,10 @@ public class DashboardFragment extends Fragment {
 
         // Find the SearchView in the layout
         searchView = rootView.findViewById(R.id.action_search);
+
+        // Set the text color of the SearchView
+        EditText searchEditText = searchView.findViewById(androidx.appcompat.R.id.search_src_text);
+        searchEditText.setTextColor(Color.WHITE);  // Set the text color to white
 
         // Set up a query listener for the SearchView
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
