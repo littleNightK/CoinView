@@ -1,0 +1,14 @@
+<!-- res/drawable/default_icon.xml -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <!-- Replace this with your default icon's vector drawable or shape -->
+    <path
+        android:fillColor="#FF0000"
+        android:pathData="M24,1c-6.61,0-12,5.39-12,12s5.39,12,12,12s12,-5.39,12,-12S30.61,1,24,1z"/>
+
+</vector>

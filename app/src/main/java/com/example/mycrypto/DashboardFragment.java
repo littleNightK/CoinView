@@ -102,24 +102,23 @@ public class DashboardFragment extends Fragment {
     private List<CryptoItem> getCryptoItemList() {
         // Initialize your cryptocurrency data here (replace this with your actual data source)
         List<CryptoItem> cryptoItemList = new ArrayList<>();
-        cryptoItemList.add(new CryptoItem("BTC", "Bitcoin", "$45,000", "+$200 (2%)"));
-        cryptoItemList.add(new CryptoItem("ETH", "Ethereum", "$3,000", "-$50 (-1%)"));
-        cryptoItemList.add(new CryptoItem("ADA", "Cardano", "$2.50", "+$0.20 (2.5%)"));
-        cryptoItemList.add(new CryptoItem("TON", "Toncoin", "$2.42", "+$0.003872 (0.16%)"));
-        cryptoItemList.add(new CryptoItem("SOL", "Solana", "$19.80", "-$0.06534 (-0.33%)"));
-        cryptoItemList.add(new CryptoItem("TRX", "Tron", "$0.084", "+$0.0001512 (0.18%)"));
-        cryptoItemList.add(new CryptoItem("BNB", "BNB", "$216.60", "-$0.5 (-0.23%)"));
+        cryptoItemList.add(new CryptoItem("BTC", "Bitcoin", "$45,000", "+$200 (2%)",R.drawable.bitcoin));
+        cryptoItemList.add(new CryptoItem("ETH", "Ethereum", "$3,000", "-$50 (-1%)",R.drawable.eth));
+        cryptoItemList.add(new CryptoItem("ADA", "Cardano", "$2.50", "+$0.20 (2.5%)",R.drawable.ada));
+        cryptoItemList.add(new CryptoItem("TON", "Toncoin", "$2.42", "+$0.003872 (0.16%)",R.drawable.ton));
+        cryptoItemList.add(new CryptoItem("SOL", "Solana", "$19.80", "-$0.06534 (-0.33%)",R.drawable.solana));
 
-        cryptoItemList.add(new CryptoItem("USDC", "USD Coin", "$1.00", "-$0,01 (-0.01%)"));
-        cryptoItemList.add(new CryptoItem("LINK", "Chaninlink", "$6.95", "+$1.12 (16,06%)"));
-        cryptoItemList.add(new CryptoItem("MKR", "Maker", "$1,305.58", "+$212.8 (16.3%)"));
-        cryptoItemList.add(new CryptoItem("QNT", "Quant", "$91.83", "-$0.77 (-0.84%)"));
-        cryptoItemList.add(new CryptoItem("EGLD", "MultiversX", "$26.97", "+$3.37 (12.65%)"));
-        cryptoItemList.add(new CryptoItem("RUNE", "THORCHAIN", "$1.92", "+$0.565 (+29.44%)"));
-        cryptoItemList.add(new CryptoItem("GNO", "Gnoisis", "$102.47", "+$4.17 (+4.07%)"));
-        cryptoItemList.add(new CryptoItem("XCH", "Chia", "$27.78", "+$0,377 (+1.36%)"));
+        cryptoItemList.add(new CryptoItem("TRX", "Tron", "$0.084", "+$0.0001512 (0.18%)",R.drawable.trx));
+        cryptoItemList.add(new CryptoItem("BNB", "BNB", "$216.60", "-$0.5 (-0.23%)", R.drawable.bnb));
 
-
+        cryptoItemList.add(new CryptoItem("USDC", "USD Coin", "$1.00", "-$0,01 (-0.01%)", R.drawable.usd));
+        cryptoItemList.add(new CryptoItem("LINK", "Chaninlink", "$6.95", "+$1.12 (16,06%)", R.drawable.link));
+        cryptoItemList.add(new CryptoItem("MKR", "Maker", "$1,305.58", "+$212.8 (16.3%)",R.drawable.mkr));
+        cryptoItemList.add(new CryptoItem("QNT", "Quant", "$91.83", "-$0.77 (-0.84%)",R.drawable.quant));
+        cryptoItemList.add(new CryptoItem("EGLD", "MultiversX", "$26.97", "+$3.37 (12.65%)",R.drawable.elrond));
+        cryptoItemList.add(new CryptoItem("RUNE", "THORCHAIN", "$1.92", "+$0.565 (+29.44%)",R.drawable.rune));
+        cryptoItemList.add(new CryptoItem("GNO", "Gnoisis", "$102.47", "+$4.17 (+4.07%)",R.drawable.gno));
+        cryptoItemList.add(new CryptoItem("ARK", "Ark", "$27.78", "+$0,377 (+1.36%)",R.drawable.ark));
 
 
 

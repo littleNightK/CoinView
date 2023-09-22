@@ -1,18 +1,17 @@
 package com.example.mycrypto;
 
+import android.content.Intent;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.Filterable;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.mycrypto.CryptoItem;
-import com.example.mycrypto.R;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,21 +34,22 @@ public class CryptoAdapter extends RecyclerView.Adapter<CryptoAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        CryptoItem cryptoItem = filteredCryptoItemList.get(position); // Use the filtered list
+        CryptoItem cryptoItem = filteredCryptoItemList.get(position);
 
         // Bind data to the views in money_type_item.xml
         holder.moneyTypeSymbol.setText(cryptoItem.getSymbol());
         holder.moneyTypeName.setText(cryptoItem.getName());
         holder.moneyTypePrice.setText(cryptoItem.getPrice());
+        holder.moneyTypeChange.setText(cryptoItem.getChange());
 
-        // Get the change text
-        String changeText = cryptoItem.getChange();
+        // Set the cryptocurrency icon based on the icon resource ID
+        holder.moneyTypeIcon.setImageResource(cryptoItem.getIconResId());
 
         // Set the text color based on whether the change is up or down
-        if (changeText.contains("+")) {
+        if (cryptoItem.getChange().contains("+")) {
             // Change is up
             holder.moneyTypeChange.setTextColor(ContextCompat.getColor(holder.itemView.getContext(), R.color.changeup));
-        } else if (changeText.contains("-")) {
+        } else if (cryptoItem.getChange().contains("-")) {
             // Change is down
             holder.moneyTypeChange.setTextColor(ContextCompat.getColor(holder.itemView.getContext(), R.color.changedown));
         } else {
@@ -57,7 +57,24 @@ public class CryptoAdapter extends RecyclerView.Adapter<CryptoAdapter.ViewHolder
             holder.moneyTypeChange.setTextColor(ContextCompat.getColor(holder.itemView.getContext(), R.color.notchange));
         }
 
-        holder.moneyTypeChange.setText(changeText);
+        // Set an OnClickListener for the item view
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Create an Intent to open the CryptoDetailActivity
+                Intent intent = new Intent(view.getContext(), CryptoDetailActivity.class);
+
+                // Pass cryptocurrency data as extras to the intent
+                intent.putExtra("cryptoSymbol", cryptoItem.getSymbol());
+                intent.putExtra("cryptoName", cryptoItem.getName());
+                intent.putExtra("cryptoPrice", cryptoItem.getPrice());
+                intent.putExtra("cryptoChange", cryptoItem.getChange());
+                intent.putExtra("cryptoIconResId", cryptoItem.getIconResId());
+
+                // Start the CryptoDetailActivity
+                view.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -70,6 +87,7 @@ public class CryptoAdapter extends RecyclerView.Adapter<CryptoAdapter.ViewHolder
         TextView moneyTypeName;
         TextView moneyTypePrice;
         TextView moneyTypeChange;
+        ImageView moneyTypeIcon;
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -77,6 +95,7 @@ public class CryptoAdapter extends RecyclerView.Adapter<CryptoAdapter.ViewHolder
             moneyTypeName = itemView.findViewById(R.id.moneyTypeName);
             moneyTypePrice = itemView.findViewById(R.id.moneyTypePrice);
             moneyTypeChange = itemView.findViewById(R.id.moneyTypeChange);
+            moneyTypeIcon = itemView.findViewById(R.id.moneyTypeIcon);
         }
     }
 

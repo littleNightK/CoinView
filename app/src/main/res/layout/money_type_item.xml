@@ -7,55 +7,61 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:background="@drawable/backgroundlinear"
-
     android:padding="16dp"
     android:layout_margin="8dp">
 
-    <!-- Left Side: Symbol and Name -->
-<LinearLayout
-android:layout_width="0dp"
-android:layout_height="wrap_content"
-android:layout_weight="1"
-android:orientation="vertical">
+    <!-- Left Corner: Icon -->
+    <ImageView
+        android:id="@+id/moneyTypeIcon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/default_icon"
+        android:layout_marginRight="15dp"/>
 
-<!-- Money Type Symbol -->
-<TextView
-    android:id="@+id/moneyTypeSymbol"
-    android:layout_width="wrap_content"
-    android:textColor="@color/white"
-    android:layout_height="wrap_content"
-    android:textSize="18sp"
-    android:textStyle="bold" />
+    <!-- Middle: Type of Money and Symbol -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
-<!-- Money Type Name -->
-<TextView
-    android:id="@+id/moneyTypeName"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textSize="14sp"
-    android:textColor="@color/white"/>
-</LinearLayout>
+        <!-- Money Type Symbol -->
+        <TextView
+            android:id="@+id/moneyTypeSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light_white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-    <!-- Right Side: Price and Change -->
-<LinearLayout
-android:layout_width="0dp"
-android:layout_height="wrap_content"
-android:layout_weight="1"
-android:orientation="vertical">
-
-<!-- Money Type Price -->
-<TextView
-    android:id="@+id/moneyTypePrice"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textColor="@color/white"
-    android:textSize="14sp" />
-
-<!-- Money Type Change -->
-<TextView
-    android:id="@+id/moneyTypeChange"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textSize="14sp" />
-</LinearLayout>
+        <!-- Money Type Name -->
+        <TextView
+            android:id="@+id/moneyTypeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/white" />
     </LinearLayout>
+
+    <!-- Right Corner: Price and Change -->
+    <LinearLayout
+        android:layout_width="147dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Money Type Price -->
+        <TextView
+            android:id="@+id/moneyTypePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light_white"
+            android:textSize="14sp" />
+
+        <!-- Money Type Change -->
+        <TextView
+            android:id="@+id/moneyTypeChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>
