@@ -76,6 +76,10 @@ public class DashboardFragment extends Fragment {
         return rootView;
     }
 
+    private void performSearch(String query) {
+        // Implement your search functionality here
+        // You can filter the data in cryptoAdapter based on the query
+    }
     private List<CryptoItem> getCryptoItemList() {
         // Initialize your cryptocurrency data here (replace this with your actual data source)
         List<CryptoItem> cryptoItemList = new ArrayList<>();
@@ -103,11 +107,6 @@ public class DashboardFragment extends Fragment {
 
         // Add more cryptocurrency items as needed
         return cryptoItemList;
-    }
-
-    private void performSearch(String query) {
-        // Implement your search functionality here
-        // You can filter the data in cryptoAdapter based on the query
     }
 
     @Override

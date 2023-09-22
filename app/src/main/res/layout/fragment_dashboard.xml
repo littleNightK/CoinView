@@ -32,7 +32,6 @@
         android:layout_width="38dp"
         android:layout_height="54dp"
         android:layout_marginEnd="16dp"
-        android:background="?android:attr/selectableItemBackground"
         android:contentDescription="Notification"
         android:src="@drawable/baseline_notifications_24"
         app:layout_constraintEnd_toEndOf="parent"
