@@ -1,5 +1,7 @@
 package com.example.mycrypto;
 
+import android.app.Notification;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -73,7 +75,24 @@ public class DashboardFragment extends Fragment {
             }
         });
 
+        // Find the notification button in the layout
+        ImageView notificationButton = rootView.findViewById(R.id.notificationIcon);
+
+        // Set an onClickListener for the notification button
+        notificationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Handle the click event here
+                openNotificationPopUp();
+            }
+        });
+
         return rootView;
+    }
+
+    private void openNotificationPopUp(){
+        Intent notificationpopup = new Intent( requireContext(), NotificationPopUp.class);
+        startActivity(notificationpopup);
     }
 
     private void performSearch(String query) {
