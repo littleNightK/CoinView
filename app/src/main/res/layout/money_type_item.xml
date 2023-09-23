@@ -45,7 +45,7 @@
 
     <!-- Right Corner: Price and Change -->
     <LinearLayout
-        android:layout_width="147dp"
+        android:layout_width="135dp"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 

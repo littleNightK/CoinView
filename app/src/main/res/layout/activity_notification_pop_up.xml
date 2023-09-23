@@ -22,9 +22,9 @@
             android:layout_height="match_parent"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="Notification here"
+            android:text="Notification (WIP)"
             android:textColor="@color/black"
-            android:textSize="40dp" />
+            android:textSize="35dp" />
 
     </LinearLayout>
 
