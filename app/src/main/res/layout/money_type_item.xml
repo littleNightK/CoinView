@@ -30,7 +30,7 @@
             android:id="@+id/moneyTypeSymbol"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/light_white"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -54,7 +54,7 @@
             android:id="@+id/moneyTypePrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/light_white"
+            android:textColor="@color/white"
             android:textSize="14sp" />
 
         <!-- Money Type Change -->

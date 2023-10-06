@@ -7,12 +7,17 @@ public class CryptoItem {
     private String change;
     private int iconResId; // Add this field for the icon resource ID
 
-    public CryptoItem(String symbol, String name, String price, String change, int iconResId) {
+    private String imageResourceName; // Add this field
+
+    public CryptoItem(String symbol, String name, String price, String change, int iconResId,String imageResourceName) {
+
         this.symbol = symbol;
         this.name = name;
         this.price = price;
         this.change = change;
         this.iconResId = iconResId; // Set the icon resource ID
+        this.imageResourceName = imageResourceName; // Set the image resource name
+
     }
 
     // Getter methods for the fields
@@ -34,5 +39,13 @@ public class CryptoItem {
 
     public int getIconResId() {
         return iconResId; // Getter for the icon resource ID
+    }
+
+    public String getImageResourceName() {
+        return imageResourceName;
+    }
+
+    public void setImageResourceName(String imageResourceName) {
+        this.imageResourceName = imageResourceName;
     }
 }

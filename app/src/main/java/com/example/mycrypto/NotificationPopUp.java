@@ -2,6 +2,7 @@ package com.example.mycrypto;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
@@ -13,6 +14,10 @@ public class NotificationPopUp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification_pop_up);
+
+        // Set rounded corners for the window
+        int cornerRadius = 30; // Adjust this value to control the corner roundness
+        setRoundedCorners(cornerRadius);
 
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
@@ -31,6 +36,17 @@ public class NotificationPopUp extends AppCompatActivity {
 
         // Set enter animation
         overridePendingTransition(R.anim.slide_in_top, R.anim.slide_out_top);
+
+    }
+
+    private void setRoundedCorners(int cornerRadius) {
+        // Create a rounded rectangle shape drawable
+        GradientDrawable drawable = new GradientDrawable();
+        drawable.setShape(GradientDrawable.RECTANGLE);
+        drawable.setCornerRadius(cornerRadius);
+
+        // Set the drawable as the background
+        getWindow().setBackgroundDrawable(drawable);
     }
 
 }

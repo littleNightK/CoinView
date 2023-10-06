@@ -40,7 +40,7 @@
             android:layout_marginBottom="16dp"
             android:text="Settings"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@color/type_money"
+            android:textColor="@color/white"
             android:textSize="38dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -75,7 +75,7 @@
                 android:layout_height="60dp"
                 android:layout_margin="5dp"
                 app:cardElevation="5dp"
-                app:cardCornerRadius="5dp"
+                app:cardCornerRadius="12dp"
                 app:cardBackgroundColor="@color/light_black">
 
                 <TextView
@@ -97,7 +97,7 @@
                 android:layout_height="60dp"
                 android:layout_margin="5dp"
                 app:cardElevation="5dp"
-                app:cardCornerRadius="5dp"
+                app:cardCornerRadius="12dp"
                 app:cardBackgroundColor="@color/light_black">
 
                 <TextView
@@ -120,7 +120,7 @@
                 android:layout_height="60dp"
                 android:layout_margin="5dp"
                 app:cardElevation="5dp"
-                app:cardCornerRadius="5dp"
+                app:cardCornerRadius="12dp"
                 app:cardBackgroundColor="@color/light_black">
 
                 <TextView
@@ -142,7 +142,7 @@
                 android:layout_height="60dp"
                 android:layout_margin="5dp"
                 app:cardElevation="5dp"
-                app:cardCornerRadius="5dp"
+                app:cardCornerRadius="12dp"
                 app:cardBackgroundColor="@color/light_black">
 
                 <TextView
@@ -164,7 +164,7 @@
                 android:layout_height="60dp"
                 android:layout_margin="5dp"
                 app:cardElevation="5dp"
-                app:cardCornerRadius="5dp"
+                app:cardCornerRadius="12dp"
                 app:cardBackgroundColor="@color/light_black">
 
                 <TextView
@@ -186,7 +186,7 @@
                 android:layout_height="60dp"
                 android:layout_margin="5dp"
                 app:cardElevation="5dp"
-                app:cardCornerRadius="5dp"
+                app:cardCornerRadius="12dp"
                 app:cardBackgroundColor="@color/light_black">
 
                 <TextView
@@ -208,7 +208,7 @@
                 android:layout_height="60dp"
                 android:layout_margin="5dp"
                 app:cardElevation="5dp"
-                app:cardCornerRadius="5dp"
+                app:cardCornerRadius="12dp"
                 app:cardBackgroundColor="@color/light_black">
 
                 <TextView
@@ -230,7 +230,7 @@
                 android:layout_height="60dp"
                 android:layout_margin="5dp"
                 app:cardElevation="5dp"
-                app:cardCornerRadius="5dp"
+                app:cardCornerRadius="12dp"
                 app:cardBackgroundColor="@color/light_black">
 
                 <TextView
@@ -252,7 +252,7 @@
                 android:layout_height="60dp"
                 android:layout_margin="5dp"
                 app:cardElevation="5dp"
-                app:cardCornerRadius="5dp"
+                app:cardCornerRadius="12dp"
                 app:cardBackgroundColor="@color/light_black">
 
                 <TextView
@@ -274,7 +274,7 @@
                 android:layout_height="60dp"
                 android:layout_margin="5dp"
                 app:cardElevation="5dp"
-                app:cardCornerRadius="5dp"
+                app:cardCornerRadius="12dp"
                 app:cardBackgroundColor="@color/light_black">
 
                 <TextView
