@@ -28,7 +28,8 @@
             android:exported="false" />
         <activity
             android:name=".RegisterInfoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"/>
         <activity
             android:name=".NotificationPopUp"
             android:exported="false"
