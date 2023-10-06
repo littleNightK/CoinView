@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "999897282625",
+    "project_id": "cryptocurrency-dashboard-d81b1",
+    "storage_bucket": "cryptocurrency-dashboard-d81b1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:999897282625:android:fd15b0e191ff1418cc2ec0",
+        "android_client_info": {
+          "package_name": "com.example.mycrypto"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIrGC2MBoGGVWvqwFBUYiJB6eA9xDblxg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

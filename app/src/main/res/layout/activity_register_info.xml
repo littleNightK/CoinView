@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".RegisterInfoActivity">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/top_after_login_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <ImageView
+
+                android:id="@+id/imageView"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:background="#3b4851"
+
+                android:contentDescription="@string/fab_transformation_scrim_behavior"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/png_transparent_man_illustration_avatar_icon_fashion_men_avatar_face_fashion_girl_heroes_thumbnail" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/LastName_regist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:hint="Last Name"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/First_Name"
+        android:layout_marginVertical="50dp"
+        />
+
+    <EditText
+        android:id="@+id/First_Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginVertical="50dp"
+        android:hint="First Name"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroll" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/User_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginVertical="50dp"
+        android:hint="@string/User_name"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LastName_regist" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clTopView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_bg"
+        android:padding="15dp"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/User_name">
+
+        <View
+            android:id="@+id/outline"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:background="@drawable/ccv_bg_rounded_corner_white"
+            app:layout_constraintStart_toStartOf="@id/etCardNumber_regist"
+            app:layout_constraintTop_toTopOf="@id/etCardNumber_regist" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/front_tvBankName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="4dp"
+            android:text="CREDIT CARD"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:textAllCaps="true"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCardTypeFront"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_max="40dp"
+
+            app:srcCompat="@drawable/ic_visa"
+            tools:srcCompat="@drawable/ic_visa" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHeaderCardNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:paddingHorizontal="4dp"
+            android:text="Card Number"
+            android:textColor="#C4C4C4"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/front_tvBankName" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etCardNumber_regist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@null"
+            android:elevation="4dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="start|center_vertical"
+            android:hint="XXXX XXXX XXXX XXXX"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:maxLength="19"
+            android:maxLines="1"
+            android:minHeight="38dp"
+            android:nextFocusDown="@id/etName"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textColorHint="#656565"
+            android:textCursorDrawable="@drawable/ccv_cursor_blue"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:translationZ="4dp"
+            app:layout_constraintHeight_min="38dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHeaderCardNumber"
+            app:lineHeight="31sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHeaderName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:paddingHorizontal="4dp"
+            android:text="Name on card"
+            android:textColor="#C4C4C4"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etCardNumber_regist" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etName_regist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="150dp"
+            android:background="@null"
+            android:gravity="start|center_vertical"
+            android:hint="NAME SURNAME"
+            android:imeOptions="actionNext"
+            android:maxLines="1"
+            android:nextFocusRight="@id/etExpiry"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textColorHint="#656565"
+            android:textCursorDrawable="@drawable/ccv_cursor_blue"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@id/etExpiry_regist"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHeaderName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHeaderExpDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:paddingHorizontal="4dp"
+            android:text="Expiry Date"
+            android:textColor="#C4C4C4"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etCardNumber_regist" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etExpiry_regist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@null"
+            android:gravity="start|center_vertical"
+            android:hint="MM/YY"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textColorHint="#656565"
+            android:textCursorDrawable="@drawable/ccv_cursor_blue"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHeaderExpDate"
+            app:textAllCaps="true" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="15dp"
+        android:text="Save"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
