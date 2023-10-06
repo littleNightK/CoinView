@@ -20,7 +20,9 @@
             android:exported="false" />
         <activity
             android:name=".RegisterInfoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"
+            />
         <activity
             android:name=".CryptoDetailActivity"
             android:exported="false"> <!-- This parentActivityName attribute defines the parent activity for the Up button -->
@@ -35,6 +37,7 @@
         <activity
             android:name=".AfterLoginFragment"
             android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

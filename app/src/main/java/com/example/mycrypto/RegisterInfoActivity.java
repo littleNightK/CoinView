@@ -36,6 +36,8 @@ public class RegisterInfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register_info);
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
+        Button backbtn = findViewById(R.id.back_button_3);
+
         Button btnRegister = findViewById(R.id.btnSave);
         EditText txtName = findViewById(R.id.First_Name);
         EditText txtLastName = findViewById(R.id.LastName_regist);
@@ -43,6 +45,7 @@ public class RegisterInfoActivity extends AppCompatActivity {
         EditText txtCardName = findViewById(R.id.etName_regist);
         EditText txtCardExp=findViewById(R.id.etExpiry_regist);
         EditText txtUsername=findViewById(R.id.User_name);
+
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -97,6 +100,17 @@ public class RegisterInfoActivity extends AppCompatActivity {
                         });
                     }
                 }
+            }
+        });
+
+
+        backbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // back to main activity
+                Intent intent = new Intent(RegisterInfoActivity.this, MainActivity.class);
+                startActivity(intent);
+                
             }
         });
     }
