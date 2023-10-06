@@ -86,44 +86,44 @@ public class AfterLoginFragment extends Fragment {
 
 
         logoutbtn.setOnClickListener(new View.OnClickListener() {
-                                         @Override
-                                         public void onClick(View v) {
-                                             mAuth = FirebaseAuth.getInstance();
-                                             mAuth.signOut();
+            @Override
+            public void onClick(View v) {
+                mAuth = FirebaseAuth.getInstance();
+                mAuth.signOut();
 
-                                             Fragment fragment = new LoginFragment();
-                                             FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                                             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                                             fragmentTransaction.replace(R.id.frame_layout, fragment);
-                                             fragmentTransaction.addToBackStack(null);
-                                             fragmentTransaction.commit();
-                                         }
-                                     }
+                Fragment fragment = new LoginFragment();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.frame_layout, fragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        }
 
         );
         //open receive activity
 
         receive.setOnClickListener(new View.OnClickListener() {
-                                       Intent intent = new Intent(getActivity(), WithdrawActivity.class);
-                                       @Override
-                                       public void onClick(View v) {
-                                           startActivity(intent);
-                                       }
+            Intent intent = new Intent(getActivity(), WithdrawActivity.class);
+            @Override
+            public void onClick(View v) {
+                startActivity(intent);
+            }
 
-                                   }
+        }
 
         );
 
         //open deposit activity
 
         deposit.setOnClickListener(new View.OnClickListener() {
-                                       Intent intent = new Intent(getActivity(), DepositActivity.class);
-                                       @Override
-                                       public void onClick(View v) {
-                                           startActivity(intent);
-                                       }
+            Intent intent = new Intent(getActivity(), DepositActivity.class);
+            @Override
+            public void onClick(View v) {
+                startActivity(intent);
+            }
 
-                                   }
+        }
 
         );
         return root;
@@ -131,7 +131,3 @@ public class AfterLoginFragment extends Fragment {
 
 
 }
-
-
-        
-
